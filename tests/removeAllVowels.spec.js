@@ -7,4 +7,10 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove all of the vowels') function() {
+		var results = $filter('removeAllVowels')('hellothere');
+
+		expect(results).toEqual('hllthr')
+	});
+
 });
